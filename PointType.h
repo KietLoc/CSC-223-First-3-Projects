@@ -13,7 +13,7 @@ private:
 
 public: 
   // Default Constr
-  PointType() {x=0; y=0; cout << fixed << setprecision(1) << showpoint}
+  PointType() {x=0; y=0; cout << fixed << setprecision(1) << showpoint;}
 
   // Constr w/ parameters
   PointType(T Ux, T Uy) : x(Ux), y(Uy) {cout << fixed << setprecision(1) << showpoint;}
