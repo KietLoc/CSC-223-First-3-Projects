@@ -1,5 +1,5 @@
 #include <iostream>
-#include "PointType.h"
+#include "CircleType.h"
 
 using namespace std;
 
