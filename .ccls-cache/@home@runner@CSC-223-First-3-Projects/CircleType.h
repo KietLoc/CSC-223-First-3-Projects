@@ -21,4 +21,57 @@ public:
   //Sets coordinates for the circumference point
   void setCircumPoint(T,T);
 
+  //Returns value x and y coordinates of the center point
+  PointType<T> getCenterPoint();
+
+  //Returns value x and y coordinates of the circumference point
+  PointType<T> getCircumPoint();
+
+  //Disp the (x,y) of CenterPoint
+  void printCenterPoint();
+
+  //Disp the (x,y) of CircumPoint
+  void printCircumPoint();
+
+  //Returns rad of circle
+  double calcRadius();
+
+  //Returns area of circle
+  double calcArea();
+
+  //Retruns circumference of circle
+  double calcCircumference();
+
+  //Prints the radius, area, and circumference to disp
+  void print();
+
+private:
+  PointType<T> centerPoint;
+  PointType<T> circumPoint;
+};
+
+template <class T>
+const double CircleType<T> :: PI = 3.14159;
+
+template <class T>
+CircleType<T>::CircleType() : centerPoint(), circumPoint() {}
+
+template <class T>
+CircleType<T>::CircleType(T xCenter, T yCenter, T xCircum, T yCircum): centerPoint(xCenter, yCenter), circumPoint(xCircum, yCircum) {}
+
+template <class T>
+CircleType<T>::CircleType(PointType<T> center, PointType<T> circum) : centerPoint(center), circumPoint(circum) {}
+
+template <class T>
+void CircleType<T>::setCenterPoint(T x, T y)
+{
+  centerPoint.setX(x);
+  centerPoint.setY(y);
+}
+
+template <class T>
+void CircleType<T>::setCircumPoint(T x, T y)
+{
+  circumPoint.setX(x);
+  circumPoint.setY(y);
 }
