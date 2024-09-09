@@ -75,3 +75,9 @@ void CircleType<T>::setCircumPoint(T x, T y)
   circumPoint.setX(x);
   circumPoint.setY(y);
 }
+
+template <class T>
+PointType<T> CircleType<T>::getCenterPoint()
+{
+  
+}
