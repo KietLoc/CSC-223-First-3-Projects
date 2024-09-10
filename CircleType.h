@@ -79,5 +79,52 @@ void CircleType<T>::setCircumPoint(T x, T y)
 template <class T>
 PointType<T> CircleType<T>::getCenterPoint()
 {
+  return centerPoint;
+}
 
+template <class T>
+PointType<T> CircleType<T>::getCircumPoint()
+{
+  return circumPoint;
+}
+
+template <class T>
+void CircleType<T>::printCenterPoint()
+{
+  centerPoint.print();
+}
+
+template <class T>
+void CircleType<T>::printCircumPoint()
+{
+  circumPoint.print();
+}
+
+template <class T>
+double CircleType<T>::calcRadius()
+{
+  double radius = centerPoint - circumPoint;
+  return radius;
+}
+
+template <class T>
+double CircleType<T>::calcCircumference()
+{
+  double circumference = 2 * PI * calcRadius();
+  return circumference;
+}
+
+template <class T>
+double CircleType<T>::calcArea()
+{
+  double area = 2 * PI * calcRadius() * calcRadius();
+  return area;
+}
+
+template <class T>
+void CircleType<T>::print()
+{
+  cout << "Radius: " << calcRadius() << endl;	
+  cout << "Area: " << calcArea() << endl;
+  cout << "Circumference: " << calcCircumference() << endl;
 }
