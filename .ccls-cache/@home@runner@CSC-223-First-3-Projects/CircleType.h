@@ -63,7 +63,7 @@ template <class T>
 CircleType<T>::CircleType(PointType<T> center, PointType<T> circum) : centerPoint(center), circumPoint(circum) {}
 
 template <class T>
-void CircleType<T>::setCenterPoint(T x, T y)
+void CircleType<T>::setCenterPoint(T xC, T yC)
 {
   centerPoint.setX(x);
   centerPoint.setY(y);
@@ -103,21 +103,21 @@ void CircleType<T>::printCircumPoint()
 template <class T>
 double CircleType<T>::calcRadius()
 {
-  double radius = centerPoint - circumPoint;
-  return radius;
+  return centerPoint - circumPoint;
+
 }
 
 template <class T>
 double CircleType<T>::calcCircumference()
 {
-  double circumference = 2 * PI * calcRadius();
-  return circumference;
+  return PI * 2 * calcRadius();
+
 }
 
 template <class T>
 double CircleType<T>::calcArea()
 {
-  double area = 2 * PI * calcRadius() * calcRadius();
+  double area = PI * calcRadius() * calcRadius();
   return area;
 }
 
