@@ -33,4 +33,14 @@ int main()
   //Cir2.getCenterPoint(x1,y1);
   //Cir2.getCircumPoint(x2,y2);
   cout << "x1 = " << x1 << " y1 = " << y1 << " x2 = " << x2 << " y2 = " << y2 << endl;
+
+
+  cout << "Radius from Cir1: " << Cir1.calcRadius() << endl;
+  cout << "Area from Cir1 " << Cir1.calcArea() << endl;
+  cout << "Circumference from Cir1: " << Cir1.calcCircumference() << endl;
+
+
+  cout << "Testing the print function for circle2: " << endl;
+  Cir2.print();
+
 }
