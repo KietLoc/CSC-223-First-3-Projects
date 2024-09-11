@@ -79,13 +79,17 @@ void CircleType<T>::setCircumPoint(T xC, T yC)
 template <class T>
 PointType<T> CircleType<T>::getCenterPoint()
 {
-  return centerPoint;
+  centerPoint.getX();
+  centerPoint.getY();
+  //return centerPoint;
 }
 
 template <class T>
 PointType<T> CircleType<T>::getCircumPoint()
 {
-  return circumPoint;
+  circumPoint.getX();
+  circumPoint.getY();
+  //return circumPoint;
 }
 
 template <class T>
